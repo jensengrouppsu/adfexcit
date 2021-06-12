@@ -5,8 +5,8 @@ from adfexcit.placzek import *
 
 class testadfexcit(unittest.TestCase):
   def setUp(self):
-    self.mo = moanal('unittest/excit_COAg4.out', 0.6)
-    self.excit = excitanal('unittest/excit_COAg4.out', 0.6, 0.6)
+    self.mo = moanal('unitTests/excit_COAg4.out', 0.6)
+    self.excit = excitanal('unitTests/excit_COAg4.out', 0.6, 0.6)
     self.placzek = placzek(0.004, self.excit.excit[3][0], self.excit.excit[3][0], self.excit.excit[3][2][0])
 
   def test_mo(self):
