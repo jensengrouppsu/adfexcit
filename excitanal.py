@@ -23,7 +23,7 @@ class excitanal(object):
             break
 
     ## call moanal to classify the MOs 
-    from adfexcit.moanal import moanal
+    from moanal import moanal
     test = moanal(filename, threshmo)
     ## locate the block which contains the information of the components of each excitation
     for i in range(len(f1)):
