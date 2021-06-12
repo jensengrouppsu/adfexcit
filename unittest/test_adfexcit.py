@@ -3,10 +3,10 @@ from adfexcit.moanal import *
 from adfexcit.excitanal import *
 from adfexcit.placzek import *
 
-class testmoanal(unittest.TestCase):
+class testadfexcit(unittest.TestCase):
   def setUp(self):
-    self.mo = moanal('excit_COAg4.out', 0.6)
-    self.excit = excitanal('excit_COAg4.out', 0.6, 0.6)
+    self.mo = moanal('unittest/excit_COAg4.out', 0.6)
+    self.excit = excitanal('unittest/excit_COAg4.out', 0.6, 0.6)
     self.placzek = placzek(0.004, self.excit.excit[3][0], self.excit.excit[3][0], self.excit.excit[3][2][0])
 
   def test_mo(self):
