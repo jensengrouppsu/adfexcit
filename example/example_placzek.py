@@ -12,8 +12,8 @@ testexcit = excitanal('excit_COAg4.out', 0.6, 0.5)
 
 i = 3
 testplaczek = placzek(0.004, testexcit.excit[i][0], testexcit.excit[i][0], testexcit.excit[i][2][0])
-print('The contribution of excitation {1:} to the polarization is {0:}'.format(testplaczek.alpha_real + testplaczek.alpha_imag, i))
-print('The derivative of the polarzability contribution of excitation {1:} wrt excitation energy is {0:}'.format(testplaczek.dalpha_dE_real + testplaczek.dalpha_dE_imag, i))
-print('The derivative of the polarzability contribution of excitation {1:} wrt transition dipole is {0:}'.format(testplaczek.dalpha_dmu_real + testplaczek.dalpha_dmu_imag, i))
+print('The contribution of excitation {1:} to the polarization is {0:}'.format(testplaczek.alpha_real + 1j * testplaczek.alpha_imag, i))
+print('The derivative of the polarzability contribution of excitation {1:} wrt excitation energy is {0:}'.format(testplaczek.dalpha_dE_real + 1j * testplaczek.dalpha_dE_imag, i))
+print('The derivative of the polarzability contribution of excitation {1:} wrt transition dipole is {0:}'.format(testplaczek.dalpha_dmu_real + 1j * testplaczek.dalpha_dmu_imag, i))
 
 

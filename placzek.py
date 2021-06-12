@@ -18,16 +18,16 @@ class placzek():
     self.dip = dip
   ### Sum-over-states formula for pol ###
     self.alpha_real =  self.dip*self.dip*( (self.energy-self.incfreq) / ((self.energy-self.incfreq)**2.0 + self.lifetime**2.0) + (self.energy + self.incfreq) / ((self.energy + self.incfreq)**2.0 + self.lifetime**2.0))
-    self.alpha_imag =  self.dip*self.dip*( self.lifetime*(1j) / ((self.energy-self.incfreq)**2.0 + self.lifetime**2.0) - self.lifetime * (1j) / ((self.energy + self.incfreq)**2.0 + self.lifetime**2.0))
+    self.alpha_imag =  self.dip*self.dip*( self.lifetime / ((self.energy-self.incfreq)**2.0 + self.lifetime**2.0) - self.lifetime / ((self.energy + self.incfreq)**2.0 + self.lifetime**2.0))
 
   ### prefactors for AB terms ###
     self.dalpha_dE_real = self.dip * self.dip * ((self.lifetime**2.0 - (self.energy - self.incfreq)**2.0) / ((self.energy - self.incfreq)**2.0 + self.lifetime**2.0)**2.0 + (self.lifetime**2.0 - (self.energy + self.incfreq)**2.0) / ((self.energy + self.incfreq)**2.0 + self.lifetime**2.0)**2.0 )
 
-    self.dalpha_dE_imag = self.dip * self.dip * (-2j*self.lifetime*(self.energy - self.incfreq) / ((self.energy - self.incfreq)**2.0 + self.lifetime**2.0)**2.0 + 2j*self.lifetime*(self.energy + self.incfreq) / ((self.energy + self.incfreq)**2.0 + self.lifetime**2.0)**2.0)
+    self.dalpha_dE_imag = self.dip * self.dip * (-2*self.lifetime*(self.energy - self.incfreq) / ((self.energy - self.incfreq)**2.0 + self.lifetime**2.0)**2.0 + 2*self.lifetime*(self.energy + self.incfreq) / ((self.energy + self.incfreq)**2.0 + self.lifetime**2.0)**2.0)
 
     self.dalpha_dmu_real = 2 * self.dip * ((self.energy - self.incfreq) / ((self.energy - self.incfreq)**2.0 + self.lifetime**2.0) + (self.energy + self.incfreq) / ((self.energy + self.incfreq)**2.0 + self.lifetime**2.0))
 
-    self.dalpha_dmu_imag = 2 * self.dip * (1j*self.lifetime / ((self.energy - self.incfreq)**2.0 + self.lifetime**2.0) - 1j*self.lifetime / ((self.energy + self.incfreq)**2.0 + self.lifetime**2.0) )
+    self.dalpha_dmu_imag = 2 * self.dip * (self.lifetime / ((self.energy - self.incfreq)**2.0 + self.lifetime**2.0) - self.lifetime / ((self.energy + self.incfreq)**2.0 + self.lifetime**2.0) )
 
 
 

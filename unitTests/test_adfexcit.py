@@ -1,7 +1,7 @@
 import unittest
-from adfexcit.moanal import *
-from adfexcit.excitanal import *
-from adfexcit.placzek import *
+from moanal import *
+from excitanal import *
+from placzek import *
 
 class testadfexcit(unittest.TestCase):
   def setUp(self):
