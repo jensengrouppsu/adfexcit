@@ -27,6 +27,4 @@ jobs:
 
     - name: Test with unittest framework
       run: |
-        cd unittest
-        python test_adfexcit.py
-
+        python -m unittest unitTests/test_adfexcit.py
